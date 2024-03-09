@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lesson03/styles.dart';
 import 'models/location.dart';
+import 'styles.dart';
 
 class LocationDetails extends StatelessWidget {
   final Location location;
@@ -34,15 +36,21 @@ class LocationDetails extends StatelessWidget {
   }
 
   Widget _sectionTitle(String text) {
-    return Text(text, style: TextStyle(fontWeight: FontWeight.bold));
+    return Container(
+        padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
+        child:
+            Text(text, textAlign: TextAlign.left, style: Styles.headerLarge));
   }
 
   Widget _sectionText(String text) {
-    return Text(text);
+    return Container(
+        padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
+        child: Text(text, style: Styles.textDefault));
   }
 
   Widget _bannerImage(String url, double height) {
     return Container(
+      constraints: BoxConstraints.tightFor(height: height),
       child: Image.network(url, fit: BoxFit.fitWidth),
     );
   }

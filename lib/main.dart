@@ -5,5 +5,10 @@ import 'mocks/mock_location.dart';
 
 void main() {
   final Location mockLocation = MockLocation.FetchAny();
-  return runApp(MaterialApp(home: LocationDetails(mockLocation)));
+  return runApp(MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: LocationDetails(mockLocation)));
 }

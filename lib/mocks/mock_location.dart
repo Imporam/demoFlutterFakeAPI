@@ -6,7 +6,7 @@ mixin MockLocation implements Location {
     return Location(
         name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
         url:
-            'https://cdn-images-1.medium.com/max/2000/1*vdJuSUKWl_SA9Lp-32ebnA.jpeg',
+            'https://i.pinimg.com/originals/ce/12/25/ce1225f92e766b3a87113dc69560e88f.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
